@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div p {
+      color: blue; /* 손자 요소를 파란색으로 설정 */
+    }
+    div > p {
+      color: crimson; /* 자식 요소를 빨간색으로 설정 */
+    }
+
+  </style>
+</head>
+  <div>
+   <p>자식</p>
+    <ul>
+      <p>손자</p>
+    </ul>
+    <p>자식</p> 
+  </div>
+
+</body>
+</html>
+
+<!-- 1. 자손 결합자와 자식 결합자의 차이가 무엇인지 작성한다. -->
+<!-- 자손 결합자 : 보통 한 칸의 공백 문자로 표현하는 자손 결합자는 두 개의 선택자를 조합하여, 뒤쪽 선택자 요소의 조상 요소의 조상에 앞쪽 선택자 요소가 존재할 경우 선택 -->
+<!-- 자식 결합자 : 두 개의 CSS 선택자 사이에 위치하여 뒤쪽 선택자의 요소가 앞쪽 선택자 요소의 바로 밑에 위치할 경우에만 선택 -->
+
+
+<!-- 강사님 풀이 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div p {
+      color: blue; /* 손자 요소를 파란색으로 설정 */
+    }
+    div > p {
+      color: crimson; /* 자식 요소를 빨간색으로 설정 */
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <p>자식</p>
+    <ul>
+      <p>손자</p>
+    </ul>
+    <p>자식</p>
+  </div>
+</body>
+
+</html>

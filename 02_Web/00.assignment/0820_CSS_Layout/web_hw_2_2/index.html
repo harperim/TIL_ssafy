@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.parent{
+  width: 350px;
+  height: 500px;
+  border: 1px solid black;
+  padding: 20px 10px;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+
+.parent img {
+  width: 85%;
+  height: auto;
+  padding: 5px 20px;
+  top: 200px;
+}
+
+.name{
+  width: 300px;
+  height: 50px;
+  background-color: peachpuff;
+  /* padding: 1px; */
+  font-size: 30px;
+  font-weight: bold;
+  top: 280px;
+  left: 30px;
+  z-index: 3;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  opacity: 0.7;
+}
+
+.text {
+  align-items: center;
+  padding: 10px;
+}
+
+</style>
+<body>
+  <div class="parent">
+    <div>
+      <img src="profile.jpg" alt="Profile Image">
+      <div class="name">
+        <p>Name</p>
+      </div>
+    </div>
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ducimus corrupti molestias iusto magni. Mollitia quaerat ducimus, nostrum esse voluptatum dicta alias, placeat repellat ipsam sunt quos sequi in incidunt!</p>
+    </div>
+  </div>
+</body>
+</html> -->
+
+
+<!-- 강사님 풀이 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .card{
+    width: 360px;
+    height: 500px;
+    border: 1px solid black;
+    padding: 20px;
+  }
+
+  .card-header{  /* 아무것도 안 쓰면 자손 / > 바로 밑에 있는 자식 */
+    position: relative;
+  }
+
+  .card-header > img {
+    width: 100%;
+  }
+
+  .card-header p {
+    position: absolute;
+    height: 50px;
+    background-color: rgba(187, 163, 83, 0.9);
+    width: 100%;
+    text-align: center;
+    font-size: 30px ;
+    bottom: 0px;
+    margin: 0px;  /* bottom 0 해도 딱 붙지 않는 이유는 margin 값이 있어서 => 0px로 설정 */
+  }
+
+</style>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <img src="profile.jpg" alt="Profile Image">
+      <p>Name</p>
+    </div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eveniet debitis dolores molestiae expedita voluptates recusandae illo nostrum nam animi aliquid, assumenda, neque tempora optio quidem ducimus dolor veniam? Eligendi?
+    </p>
+  </div>
+</body>
+</html>

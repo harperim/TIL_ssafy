@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 200px;
+      border-color: black;
+      border-style: solid;
+      border-width: 5px;  
+      padding-left: 25px;  /*패딩 왼쪽 25px만큼 띄우기*/
+      padding-bottom: 50px;  /*패딩 아래쪽 50px만큼 띄우기*/  
+      margin-left: 50px;
+      margin-top: 50px;  /*마진 값 왼쪽을 줘야 오른쪽으로 이동 가능(밀어낸다고 생각)*/
+    }  /*border, padding, margin 끼리 묶어서 한 줄씩 표현 가능*/
+
+    .box2 {
+      width: 200px;
+      border: 5px dotted black;
+      padding: 25px 50px;
+      margin: 25px auto;  /*auto : 창 크기 바꾸면 알아서 조정됨*/
+    }
+
+    .box3 {
+      width: 200px;
+      padding: 25px 50px;  /* 북쪽 25, 동쪽 50, 마주보는 자리에 여백 값 들어감, 남쪽 25, 서쪽 50 */
+      margin: 25px auto;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+  <div class="box3">box3</div>
+</body>
+
+</html>
