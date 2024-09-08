@@ -21,9 +21,5 @@ for tc in range(1, T + 1):  # tc: 1
         for j in range(start, end):  # 열  j: 2
             total_sum += arr[i][j]  # i번째 행에서 start 열부터 end 열까지의 값을 더하는 역할
 
-
     print(f'#{tc} {total_sum}')
-
-
-
 
