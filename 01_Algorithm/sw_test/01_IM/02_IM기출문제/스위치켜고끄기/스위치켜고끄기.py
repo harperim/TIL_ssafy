@@ -1,5 +1,6 @@
-import sys
-sys.stdin = open('스위치켜고끄기_input.txt_input.txt')
+import sys;
+sys.stdin = open('스위치켜고끄기_input.txt')
+
 
 def change(num):
     """스위치 상태를 토글하는 함수.
