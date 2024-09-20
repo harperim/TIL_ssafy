@@ -19,6 +19,10 @@ def dinner(request):
     }
     return render(request, 'articles/dinner.html', context)
 
+def search(request):
+    return render(request, 'articles/search.html')
+
+
 
 def throw(request):
     return render(request, 'articles/throw.html')
@@ -34,6 +38,13 @@ def catch(request):
          'message': message,
     }
     return render(request, 'articles/catch.html', context)
+
+def detail(request, num):
+    context = {
+        'num': num,
+    }
+    return render(request, 'articles/detail.html', context)
+
 
 
 def greeting(request, name):

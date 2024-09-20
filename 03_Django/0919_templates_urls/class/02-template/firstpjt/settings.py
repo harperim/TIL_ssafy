@@ -56,7 +56,7 @@ ROOT_URLCONF = "firstpjt.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR/'templates'],
+        "DIRS": [BASE_DIR/'templates'],  # 객체 지향적 경로 작성법
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
