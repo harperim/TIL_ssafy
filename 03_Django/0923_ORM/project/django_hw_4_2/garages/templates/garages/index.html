@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Garages</h1>
+
+  <h3>현황 살펴보기</h3>
+  {% for garage in garages %}
+    <b><p>위치: {{ garage.location }}</p></b>
+    <p>주차 공간 개수 : {{ garage.capacity }}</p>
+    <p>주차 가능 여부 : {{ garage.is_parking_available }}</p>
+    <p>opening time : {{ garage.opening_time }}</p>
+    <p>closing time : {{ garage.closing_time }}</p>
+  {% endfor %}
+  <hr>
+
+</body>
+</html>

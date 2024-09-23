@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Garages</h1>
+
+  <h3>1. location이 ‘독도’인 차고지가 없다면 새 데이터를 생성 후 조회하여 출력한다.</h3>
+  {% for dokdo in dokdo_garages %}
+    <b><p>위치: {{ dokdo.location }}</p></b>
+    <p>주차 공간 개수 : {{ dokdo.capacity }}</p>
+    <p>주차 가능 여부 : {{ dokdo.is_parking_avaliable }}</p>
+    <p>opening time : {{ dokdo.opening_time }}</p>
+    <p>closing time : {{ dokdo.closing_time }}</p>
+  {% endfor %}
+  <hr>
+
+
+  <h3>2. 현재 capacity가 30 이하인 차고지를 모두 모아 출력하시오.</h3>
+  {% for thirty_under in thirty_unders %}
+    <b><p>위치: {{ thirty_under.location }}</p></b>
+    <p>주차 공간 개수 : {{ thirty_under.capacity }}</p>
+    <p>주차 가능 여부 : {{ thirty_under.is_parking_avaliable }}</p>
+    <p>opening time : {{ thirty_under.opening_time }}</p>
+    <p>closing time : {{ thirty_under.opening_time }}</p>
+  {% endfor %}
+  <hr>
+
+
+  <h3>3. 현재 주차 가능 여부가 True인 차고지를 모두 조회하시오.</h3>
+  <h4>조회한 모든 차고지의 location을 각각 출력하시오.</h4>
+  {% for available_garage in available_garages %}
+    <b><p>위치: {{ available_garage.location }}</p></b>
+    <p>주차 공간 개수 : {{ available_garage.capacity }}</p>
+    <p>주차 가능 여부 : {{ available_garage.is_parking_avaliable }}</p>
+    <p>opening time : {{ available_garage.opening_time }}</p>
+    <p>closing time : {{ available_garage.opening_time }}</p>
+  {% endfor %}
+  <hr>
+
+</body>
+</html>
