@@ -12,12 +12,18 @@ def index(request):
     return render(request, 'todos/index.html', context)
 
 def create_todo(request):
+    return render(request, 'todos/create_todo.html')
+
+
+
+def create_todo_ok(request):
     work = request.POST.get('work')
     content = request.POST.get('content')
-    work = Todo(work=work, content=content)
-    work.save()
-    # return render(request, 'todos/create_todo.html')
-    return redirect('todos:detail', work.pk)
+    is_completed = False
+    todo = Todo(work=work, content=content, is_completed=is_completed)
+    todo.save()
+    return redirect('todos:detail', todo.pk)
+
 
 
 def detail(request, todo_pk):
@@ -28,25 +34,13 @@ def detail(request, todo_pk):
     return render(request, 'todos/detail.html', context)
 
 
-# # (1) 수정
-# def new_todo(request, pk):
-#     work = Todo.objects.get(pk=pk)
-#     context = {
-#         'work': work,
-#     }
-#     return render(request, 'todos/new_todo.html', context)
-
-# # (2) 수정 후 업데이트
-# def update(request, pk):
-#     work = Todo.objects.get(pk=pk)
-#     work.work = request.POST.get('work')
-#     work.content = request.POST.get('content')
-#     work.save()
-#     return redirect('todos:detail', work.pk)
-
-
-# 삭제
 def delete(request, pk):
-    work = Todo.objects.get(pk=pk)
-    work.delete()
+    todo = Todo.objects.get(pk=pk)
+    todo.delete()
     return redirect('todos:index')
+
+
+
+
+
+

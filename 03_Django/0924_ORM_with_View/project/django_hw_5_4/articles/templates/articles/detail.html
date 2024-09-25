@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>게시글 상세 페이지</h1>
+  <p>게시글 번호 : {{ article.pk }}</p>
+  <p>제목 : {{ article.title }}</p>
+  {% comment %} <p>내용 : {{ article.content }}</p> {% endcomment %}
+  <p>작성일 : {{ article.created_at }}</p>
+  <p>수정일 : {{ article.updated_at }}</p>
+  <hr>
+  <a href="{% url "articles:edit" article.pk %}">[EDIT]</a>
+  <form action="{% url "articles:delete" article.pk %}" method='POST'>
+    {% csrf_token %}
+    <input type="submit" value='DELETE'>
+  </form>
+  <a href="{% url "articles:index" %}">[back]</a>
+</body>
+</html>

@@ -2,10 +2,10 @@
 
 {% block content %}
   <h1>이 곳에서 할 일을 생성합니다.</h1>
-  <form action="{% url "todos:index" %}" method="POST">
-    {% csrf_token %}
-    <p>work : <input type="text" name="work"></p>
-    <p>content : <textarea name="content" id=""></textarea></p>
+  <p>추후 기능 추가 예정</p>
+
+  <form action="{% url "todos:index" %}">
+    <input type="text" name="work">
     <input type="submit" value="제출">
   </form>
 {% endblock content %}

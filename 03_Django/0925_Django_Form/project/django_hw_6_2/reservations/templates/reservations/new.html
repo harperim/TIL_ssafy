@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>예약 생성 페이지</h1>
+  <form action="{% url "reservations:new" %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% comment %} <label for="start">Date: </label>
+    <input type="date" id="start" name="trip-start" value="2018-07-22" min="2000-01-01" max="2024-12-31" /> {% endcomment %}
+    <div>
+      <input type="submit" value="예약 생성">
+    </div>
+    <a href="{% url "reservations:index" %}">[back]</a>
+  </form>
+
+{% endblock content %}
+
+
+{% comment %} <p>Name: <input type="text"></p>
+
+<div>
+  <input type="submit" value="예약 생성" style='margin-top: 20px'>
+</div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Create</h1>
+  <form action="{% url "articles:create" %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+  </form>
+</body>
+</html> {% endcomment %}
