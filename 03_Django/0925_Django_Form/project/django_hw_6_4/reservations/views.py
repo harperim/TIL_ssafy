@@ -36,6 +36,7 @@ def new(request):
     else:
         form = ReservationForm()
     
+    # 1. 유효성 검사를 통과하지 못했을 때 2. 메소드가 post가 아닐 때 
     context = {
         'form': form,
     }
