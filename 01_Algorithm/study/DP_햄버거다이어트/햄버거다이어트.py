@@ -3,13 +3,13 @@ sys.stdin = open('햄버거다이어트_input.txt', 'r')
 
 
 def select_burger(burgers, cal_limit):
-    n = len(burgers)
+    n = len(burgers)  # 5
     dp = [[0 for _ in range(cal_limit + 1)] for _ in range(n+1)]
     for i in range(1, n+1):
         for j in range(1, cal_limit + 1):
-            score, cal = burgers[i-1]  # 현재 햄버거의 점수와 칼로리
+            score, cal = burgers[i-1]  # 현재 햄버거의 점수와 칼로리 / 100 200
             if cal <= j:  # 현재 햄버거의 칼로리가 칼로리 제한 j 이하일 경우
-                dp[i][j] = max(dp[i-1][j], dp[i-1][j-cal] + score)  # 선택할 대와 선택하지 않을 때의 최대 점수를 비교
+                dp[i][j] = max(dp[i-1][j], dp[i-1][j-cal] + score)  # 선택할 때와 선택하지 않을 때의 최대 점수를 비교
             else:
                 dp[i][j] = dp[i-1][j]  # 선택할 수 없으므로 이전 햄버거의 값을 그대로 사용
     return dp[n][cal_limit]  # 최대 점수 반환환
