@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{ form.non_fileld_error }}
+    <form action="..." method="POST">
+        {% csrf_token %}
+        <div>
+            {{ form.title.errors }}
+            <label for="{{ form.title.id_for_label }}">Title:</label>
+            {{ form.title }}
+        </div>
+        <div>
+            {{ form.content.errors }}
+            <label for="{{ form.content.id_for_label }}">Content:</label>
+            {{ form.content }}
+        </div>
+        <input type="submit">
+    </form>
+</body>
+</html>

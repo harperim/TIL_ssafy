@@ -12,7 +12,7 @@ def select_burger(burgers, cal_limit):
                 dp[i][j] = max(dp[i-1][j], dp[i-1][j-cal] + score)  # 선택할 때와 선택하지 않을 때의 최대 점수를 비교
             else:
                 dp[i][j] = dp[i-1][j]  # 선택할 수 없으므로 이전 햄버거의 값을 그대로 사용
-    return dp[n][cal_limit]  # 최대 점수 반환환
+    return dp[n][cal_limit]  # 최대 점수 반환
 
 T = int(input())
 for test_case in range(1, T + 1):
@@ -24,6 +24,8 @@ for test_case in range(1, T + 1):
     res = select_burger(burger_lst, cal_limit)  # 최대 점수 계산
     print(f"#{test_case} {res}")
 
+
+print([[0 for _ in range(5+1)]])
 
 '''
 cal_limit와 n의 값
