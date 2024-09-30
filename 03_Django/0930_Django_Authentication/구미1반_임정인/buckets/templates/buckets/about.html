@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% comment %} 03. {% block  %}{% endblock  %} 칸에 body라고 되어 있던 부분을 content로 변경시켜준다.  {% endcomment %}
+{% block content %}
+
+<h1>여행지 버킷리스트</h1>
+<p>이 사이트는 여행지 버킷리스트를 만들어보는 사이트입니다.</p>
+<p>여행지 버킷리스트를 만들어보세요.</p>
+{% comment %} 02. {% extends %} 보다 위에 {% load static %}이 위치하고 있었으므로  {% endcomment %}
+{% comment %} {% block  %}{% endblock  %} 안에 위치하도록 자리를 옮겨준다.  {% endcomment %}
+{% load static %}
+<img src="{% static 'assets/flight01.jpg' %}" alt="noimage" style="max-width: 500px; max-height:500px;">
+
+{% endblock content %}

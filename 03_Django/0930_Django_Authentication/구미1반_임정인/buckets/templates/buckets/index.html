@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h1>여행지 버킷리스트 서비스</h1>
+  <a href="{% url 'buckets:create' %}">[CREATE]</a>
+
+  <ul>
+    {% for list in travel_bucket_lists %}
+    <a href="{% url 'buckets:detail' list.pk%}">
+      {% if list.image %}
+        <img src="{{ list.image.url }}" alt="{{ list.image_description }}">
+      {% else %}  
+        <img src="{% static 'assets/noimage.png' %}" alt="noimage" style="max-width: 200px; max-height:200px;">
+      {% endif %}
+      {% comment %} 01. models.py 파일에 가서 변수명 확인 후, LA 라는 데이터를 저장한 변수명 city로 변경 {% endcomment %}
+      <p>{{ list.city }}</p>  
+    </a>
+    <hr>
+    {% endfor %}
+  </ul>
+{% endblock content %}
