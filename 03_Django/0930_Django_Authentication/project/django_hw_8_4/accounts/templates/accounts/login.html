@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>LOGIN</h1>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <!-- <input type="submit" value='로그인'> -->
+    <!-- form 안에 버튼은 submit 기능이 있음, 이벤트 처리 안 해줘도 됨 -->
+    <button>LOGIN</button>
+    
+  </form>
+{% endblock content %}
+
+
