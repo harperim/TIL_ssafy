@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>메인 페이지</h1>
+  <div class='container'>
+    <div class='row'>
+      {% for movie in movies %}
+      <div class='col-md-6 mb-4'>
+        <div class="card" style="width: 30rem;">
+          <h5 class="card-header">{{ movie.title }}</h5>
+          <div class="card-body">
+            <p class="card-text">{{ movie.plot }}</p>
+            <a href="{% url "movies:detail" movie.pk %}" class="btn btn-primary">Detail</a>
+          </div>
+        </div>
+      </div>
+      
+      {% empty %}
+      <li>아직 작성한 리뷰가 없습니다.</li>
+      {% endfor %}
+    </div>
+  </div>
+  
+
+{% endblock content %}
+

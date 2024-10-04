@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: flex;
+    justify-content: center;
+    align-itemse: center;
+  }
+</style>
+<h1>영화 상세 페이지</h1>
+  <div class='container'>
+    
+    <form action="{% url "movies:delete" movie.pk %}" method='POST'>
+      {% csrf_token %}
+      {% if movie.image %}
+        <img src="{{ movie.image.url }}" alt="img" style='max_width: 200px; height: 500px;'>
+      {% endif %}
+      <p>{{ movie.title }}</p>
+      <p>{{ movie.plot }}</p>
+      <button type="submit" class="btn btn-danger">DELETE</button>
+      <a href="{% url "movies:update" movie.pk %}" class="btn btn-primary">UPDATE</a> 
+      <a href="{% url "movies:index" %}" class="btn btn-secondary">BACK</a>
+    </form>
+    <br>
+
+    
+  </div>
+
+  
+{% endblock content %}
+

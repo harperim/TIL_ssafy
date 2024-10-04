@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <style>
+    h1 {
+      margin-top: 50px;
+    }
+    form {
+      width: 100%;             /* 폼 너비를 100%로 설정 */
+      max-width: 800px;       /* 최대 너비 설정 (원하는 크기로 조정 가능) */
+      margin: 0 auto;         /* 수평 중앙 정렬 */
+    }
+  </style>
+  
+  <h1>회원정보 수정</h1>
+  <form action="{% url "accounts:update" %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value='수정'>
+  </form>
+  <br>
+  <form action="{% url "accounts:delete" %}" method='POST'>
+    {% csrf_token %}
+    <input type="submit" value='회원탈퇴'>
+  </form>
+
+{% endblock content %}
+
+
