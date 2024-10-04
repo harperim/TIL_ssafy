@@ -13,14 +13,19 @@ def crawling_basic():
 
     # html을 잘 정리된 형태로 변환
     soup = BeautifulSoup(html_text, 'html.parser')
+    # print(type(soup))  # bs4.BeautifulSoup - BeautifulSoup 가 제공하는 객체로 반환 
+
+    # print(soup.prettify())
 
     # 1. 태그를 이용하여 하나 검색
-    main = soup.find('a')
+    main = soup.find('a')  # 가장 먼저 만나는 a 태그 반환 
     print(f'제목 : {main.text}')
 
     # 2. 해당 태그인 모든 요소 검색
-    a_tags = soup.find_all('a')
-    print(f'a 태그 : {a_tags}')
+    a_tags = soup.find_all('a')  # 리스트로 반환 (반복문 돌리기 가능)
+    # print(f'a 태그 : {a_tags}')
+    # for tag in a_tags:
+    #     print(f'태그: {tag.text}')
 
     # 3. CSS 선택자로 하나 검색
     # 선택자가 일치하는 첫 번째글
