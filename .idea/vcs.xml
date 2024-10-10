@@ -9,5 +9,7 @@
     <mapping directory="$PROJECT_DIR$/03_Django/0926_Static/project/django_hw_7_4" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/03_Django/0926_Static/project/django_ws_7_a" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/03_Django/0926_Static/project/django_ws_7_b" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/03_Django/1002_Django_Authentication2/project/django_hw_9_2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/03_Django/1002_Django_Authentication2/project/django_hw_9_4" vcs="Git" />
   </component>
 </project>
