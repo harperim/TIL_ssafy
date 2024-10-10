@@ -19,11 +19,9 @@ def dfs(v, count):
         max_count = count
 
 
-# 테스트 케이스 수 입력
 T = int(input())
 for tc in range(1, T + 1):
-    # 노드 수 N과 간선 수 M 입력
-    N, M = map(int, input().split())
+    N, M = map(int, input().split())  # 노드 수 N / 간선 수 M
 
     # 각 노드의 인접 리스트를 위한 배열 초기화
     graph = [[] for _ in range(N + 1)]

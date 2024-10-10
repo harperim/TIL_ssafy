@@ -46,13 +46,13 @@ def dijkstra(start, end, graph, n):
 
 def solve():
     global n
-    tc = int(input())
-    for t in range(1, tc + 1):
+    T = int(input())
+    for tc in range(1, T + 1):
         # 각 테스트 케이스에 대한 노드 수, 간선 수, 시작 노드, 종료 노드 입력
         n, m, start, end = map(int, input().split())
         graph = input_graph(m)  # 그래프 생성
         answer = dijkstra(start, end, graph, n)  # 최단 경로 계산
-        print(f"#{t} {answer}")
+        print(f"#{tc} {answer}")
 
 
 solve()

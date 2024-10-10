@@ -22,11 +22,9 @@ def dfs(S, G):
     return 0  # 경로가 존재하지 않을 경우 0 반환
 
 
-# 테스트 케이스 수 입력
 T = int(input())
 for tc in range(1, T+1):
-    # 정점 수 V와 간선 수 E 입력
-    V, E = map(int, input().split())
+    V, E = map(int, input().split())  # 정점 수 V / 간선 수 E
 
     # 방문 배열 초기화 (1-indexed)
     visited = [0 for _ in range(V + 1)]
